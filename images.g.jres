@@ -1,0 +1,12 @@
+{
+    "image1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAcBERAAAAEAFwBwAAAA8eIXF3j4j4D24RcnePiPgPHhFyd4+I+A8eEXJ3jwAAAB4fcneFAAAAHhFyd48AAAAeEXJ3j4j4D24RcnePiPgPHiFxd4+I+A8QAXAHAAAADwAAcBERAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "bob the builder"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
+    }
+}
