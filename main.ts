@@ -432,10 +432,11 @@ game.onUpdateInterval(500, function () {
             ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
             ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
             `)
-        tiles.setCurrentTilemap(tilemap`level1`)
+        tiles.setCurrentTilemap(tilemap`level 2`)
         baddie.follow(mySprite, 90)
     }
-    if (info.score() > 3500) {
+    if (info.score() > 5000) {
+        info.setLife(2)
         scene.setBackgroundImage(img`
             ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
             ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -501,7 +502,7 @@ game.onUpdateInterval(500, function () {
             fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff222222222222222ffffff2222ffffffffffffffffff222ff222222222fffff22222f2222222ffffffff22222222222fff2222222fffffffff
             ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2222ff2222222222ffffffffffffffffffffffffffff2222f222222222fffff2222ff222222fffffffff22222222222fff2222222fffffffff
             fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff22222fff2222222ffffffffffffffffffffffffffffff22222222222222ffffffffffffffffffffffffff22222222222ffff222222fffffffff
-            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff22222ffffffffffffffffffffffffffffffffffffffffff2222222222222ffffffffffffffffffffffffff2222ffffffffff222222ffffffffff
+            ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff22222ffffffffffffffffffffffffffffffffffffffffff2222222222222fffffffffffffff3ffffffffff2222ffffffffff222222ffffffffff
             fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff22222ffffffffffffffffffffffffffffffffffffffffffff22222ffffffffffffffffffffffffffffffffffffffffffffff22222ffffffffffff
             fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff22222ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff22222fffffffffffff
             fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2222ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff22222ffffffffffffff
@@ -618,7 +619,12 @@ game.onUpdateInterval(500, function () {
             ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
             ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
             `)
-        tiles.setCurrentTilemap(tilemap`level1`)
+        tiles.setCurrentTilemap(tilemap`time to die`)
         baddie.follow(mySprite, 150)
+        if (info.score() > 7500) {
+            scene.setBackgroundImage(assets.image`home`)
+            tiles.setCurrentTilemap(tilemap`level 2`)
+            baddie.follow(mySprite, 15)
+        }
     }
 })
